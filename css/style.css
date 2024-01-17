@@ -1,8 +1,20 @@
-*{
-    font-family: Roboto, Arial, Helvetica, sans-serif ;
+#navbar{
+    background-color: #000000;
+    overflow: hidden;
+    color: white;
 }
-body{
-    margin: 0;
-    background-color: purple;
+
+#navbar > a{
+    float: left;
+    color: #f3ededc5;
     text-align: center;
+    padding: 1.5em;
+}
+#navbar > a:hover{
+    background-color: #4f4f4f;
+    color: black;
+}
+#navbar > a:active{
+    background-color:#498ba3;
+    color: black
 }
