@@ -1,21 +1,140 @@
-#navbar{
-    background-color: #000000;
-    overflow: hidden;
+@media only screen and (max-width:600){
+  body{
+    background-color:#006aff;
+    min-height: 100vh;
+  }
+
+}
+
+html{
+    height: 100%;
+    background-color:#a9deff;
+    margin-top: auto;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+#navbar {
+  overflow:hidden;
+  background-color: black;
+  height:100%;
+  flex-direction: row;
+}
+  
+  #navbar > a {
+  color: #ffffff;
+  text-align: center;
+  padding:5%;
+  margin-bottom:0;
+  font-size: x-large;
+}
+#navbar >a:hover {
+  background-color: rgb(3, 64, 161);
+  color: black;
+  text-decoration: underline;
+}
+  
+  #navbar > a.active {
+    background-color: #2873ff;
     color: white;
 }
 
-#navbar > a{
-    float: left;
-    color: #f3ededc5;
-    text-align: center;
-    padding: 1.5em;
+#navbar > img {
+  float:left;
+  height:100px;
+  width: 120px
 }
-#navbar > a:hover{
-    background-color: #4f4f4f;
-    color: black;
+.search{
+  float: right;
+  background-color: #ddd;
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin:1em;
+  padding:0.5%;
+  float:right;
+  height:40%;
+  width: 5%;
 }
-#navbar > a:active{
-    background-color:#498ba3;
-    color: black;
+#searchbar{
+  width:20%;
+  height:25%;
+
+}
+.search:hover{
+  background-color: #2873ff;
+}
+.search:active{
+  background-color: #333;
+  color:white;
+  font-size: 1.5em;
+  border-radius: 10px;
 }
 
+#footer{
+  position:fixed;
+  bottom:0;
+  background-color:black;
+  width: 100%;
+  margin-top:auto;
+  word-wrap:break-word;
+  color:#2873ff;
+}
+.title{
+  font-size: medium;
+  padding:0px;
+  margin:0;
+  color:white;
+  text-decoration:underline;
+
+}
+
+
+.btn.dropdown-toggle {
+  width: 150px;
+  text-align: center;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+.cont{
+  margin:10px;
+  padding:10px;
+}
+label {
+  padding-top: 5px;
+}
+
+.form-label {
+  padding-left: 0px !important;
+}
+
+.form-control {
+  border-radius: 100px;
+}
+
+.btn-primary {
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #39d6c9;
+}
+
+img.track {
+  border: 3px solid #8a8a8a;
+}
+.btn-dark{
+  float:right;
+  margin:5%;
+  padding:auto;
+  border: 3px black solid;
+}

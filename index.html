@@ -1,36 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gymnnasiearbete</title>
+    <link rel="shortcut icon" href="./img/logo2.png">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-    <nav>
-        <div id="navbar">
-            <a href="#Home">Home</a>
-            <a href="#Playslists">Playlists</a>
-            <input type="text" placeholder="Search...">
-            <a href="Signinup">Sign in/Sign up</a>
-        </div>
-    </nav>
-</header>
-<!--side bar to let own playlists to
-    stay in a list called "Your playlist"-->
+<header>
+<nav>
 
-    <div class="actualSong">
-        <i id="BackButton" class="fa-solid fa-backward-step"></i>
-        <i id="StopButton" class="fa-solid fa-forward-step"></i>
-        <i id="NextButton" class="fa-solid fa-circle-pause"></i>z
-        
+    <div id="navbar">
+        <img src="./img/logo2.png" alt="Symbol">
+        <a href="#Playslists">Playlists</a>
+        <a href="login.html"target="_self">Sign in</a>
+        <a href="logout.html" target="_self">Sign out</a>
+        <input class="search" type="submit" name="search" value="search">
+        <input type="text" placeholder="Search..." class="search" id="searchbar">
+
     </div>
+</nav>
+</header>
+    <main class="maincont">
+        <div class="cont">
+            <h1 class="px-3">Playlists:</h1>
+            <form action="">
+                <input type='hidden' id='hidden_token'>
+                <div class='col-sm-6 form-group row mt-4 px-3'>
+                    <label for='Genre' class='form-label col-sm-2'>Genre:</label>
+                    <select name='' id='select_genre' class='form-control form-control-sm col-sm-10'>
+                        <option>Choose a Genre...</option>                    
+                    </select>
+                </div>
+                <div class='col-sm-6 form-group row px-3'>
+                    <label for='Genre' class='form-label col-sm-2'>Playlists:</label>
+                    <select name='' id='select_playlist' class='form-control form-control-sm col-sm-10'>
+                        <option>Choose a playlists...</option>                    
+                    </select>
+                </div>                  
+                <div class='col-sm-6 row form-group px-0'>
+                    <button type='submit' id='btn_submit' class='btn btn-primary col-sm-12'>Search</button>
+                </div>          
+            </form>        
+            <div class='row'>
+                <div class='col-sm-6 px-0'>
+                    <div class='list-group song-list'>
+                        
+                    </div>                                             
+                </div>
+                <div class='offset-md-1 col-sm-4' id='song-detail'>                
+                </div>
+            </div>   
+            </form>
+        </div>
+            <footer id="footer">
+                    
+                    <p class="title"><b>DEVELOPER</b></p>
+                    <p>This website tries to imitate a project for a page used to reproduce music, we have a log in and out page you can use and also display playlists every time you press that button</p>
+                
+                    <p class="title"><b>DEVELOPER NOTE: </b></p>
+                    <p>if you want to use this web as a guest, type guest and password to log in as a guest</p>
+                
+                    <p class="title"><b>CONTACT</b></p>
+                    <ul>
+                        <li>Email: ignacio.penasepulveda@elev.ntig.se</li>
+                        <li>Phone: +46 73 748 23 01</li>
+                    </ul>
+                
+                    <p class="title"><b>COPYRIGHT</b></p>
+                    <p>&copy;NTI Gymnasiet Södertörn</p>
 
-
-
-    <script src="./js/script.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                </footer>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
