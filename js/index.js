@@ -259,24 +259,3 @@ const APIController = (function() {
   
   })(UIController, APIController);
   
-//med den här ska jag kunna fetcha playlists till en knapp för att de ska visas
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('Playlistsbtn').addEventListener('click', async function () {
-        try {
-            const response = await fetch('https://api.example.com/playlists');
-            const playlists = await response.json();
-            const playlistsbtn = document.querySelector('.playslists');
-            playlistsbtn.innerHTML = '';
-            for (let i = 0; i < playlists.length; i++) {
-                const playlistItem = document.createElement('li');
-                playlistItem.textContent = playlists[i].name;
-                playlistsbtn.appendChild(playlistItem);
-            }
-        } catch (error) {
-        console.error('Error fetching playlists:', error);
-        }
-    });
-});
-
-// will need to call a method to load the genres on page load
-APPController.init();
